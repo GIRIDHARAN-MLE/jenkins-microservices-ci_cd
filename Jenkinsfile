@@ -18,4 +18,15 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo "running job status"
+        }
+        success {
+            echo "successfully executed"
+        }
+        failure {
+            echo "job failed"
+        }
+    }
 }
